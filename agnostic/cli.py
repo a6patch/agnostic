@@ -7,6 +7,17 @@ import tempfile
 import click
 import sqlparse
 
+from dotenv import load_dotenv
+print('Loading .env', flush=True)
+APP_ENV = os.getenv("APP_ENV")
+if APP_ENV:
+    print('Loading .env.' + APP_ENV, flush=True)
+    load_dotenv('.env.' + APP_ENV + '.local') 
+    load_dotenv('.env.' + APP_ENV)
+load_dotenv('.env.local')     
+load_dotenv() 
+
+
 from agnostic import create_backend, Migration, MigrationStatus
 
 

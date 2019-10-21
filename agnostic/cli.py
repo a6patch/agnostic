@@ -277,10 +277,10 @@ def list_(config):
 @click.command()
 @click.option(
     '--backup/--no-backup',
-    default=True,
+    default=False,
     help='Automatically backup the database before running ' \
          'migrations, and in the event of a failure, automatically ' \
-         'restore from that backup. (default: --backup).'
+         'restore from that backup. (default: --no-backup).'
 )
 @pass_config
 def migrate(config, backup):

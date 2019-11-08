@@ -16,8 +16,8 @@ MigrationStatus = Enum(
 # be redundant in ANSI SQL.
 MIGRATION_TABLE_SQL = '''
     CREATE TABLE agnostic_migrations (
-        name VARCHAR(255) PRIMARY KEY,
-        status VARCHAR(255) NULL DEFAULT NULL,
+        name VARCHAR(200) PRIMARY KEY,
+        status VARCHAR(200) NULL DEFAULT NULL,
         started_at TIMESTAMP NULL DEFAULT NULL,
         completed_at TIMESTAMP NULL DEFAULT NULL
     )
